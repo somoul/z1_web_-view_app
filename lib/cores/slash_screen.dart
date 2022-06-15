@@ -28,7 +28,7 @@ class SlashScreen extends StatelessWidget {
   //     }
   //   }
   // }
-
+//
   @override
   Widget build(BuildContext context) {
     // onRoute(context);
