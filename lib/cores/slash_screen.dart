@@ -46,7 +46,7 @@ class SlashScreen extends StatelessWidget {
               height: 100,
               width: 100,
               color: Colors.green,
-            )), //SvgPicture.asset('asset/asset_logo/flexi_logo_not_title.svg'))),
+            )), 
           ),
         ],
       ),
