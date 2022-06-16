@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 
-import '../../cores/slash_screen.dart';   
+import '../../cores/slash_screen.dart';
+import '../../modules/dassbord/dassbord_screen.dart';   
 @MaterialAutoRouter(            
   replaceInRouteName: 'Page,Route',            
   routes: <AutoRoute>[            
@@ -8,8 +9,12 @@ import '../../cores/slash_screen.dart';
     path: "/slashScreen",
     page: SlashScreen,
     initial: true,
-  ),           
+  ),  
+  AutoRoute(
+    path: "/dassbordScreen",
+    page: DassbordScreen,
+  ),  
+  RedirectRoute(path: '*', redirectTo: '/dassbordScreen')          
   ],            
-)            
-// extend the generated private router      
+)                
 class $AppRouter {} 
