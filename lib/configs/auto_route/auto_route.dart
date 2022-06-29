@@ -17,32 +17,29 @@ import '../../modules/scan_qp_code/scan_qr_code_screen.dart';
     path: "",
     page: BottomBar,
  children: [
+  AutoRoute(
+        page: ScanQrCodeSceen,
+        path: 'scanQrCodeSceen',
+        name: "ScanQrCodeSceen",
+      ),
    AutoRoute(
         initial: true,
         path: "dassbordScreen",
         name: "DassbordScreen",
         page: DassbordScreen,
       ),
-      AutoRoute(
+     
+       AutoRoute(
         path: "profileScreen",
         name: "ProfileScreen",
         page: ProfileScreen,
-      ),
-      AutoRoute(
-        page: ScanQrCodeSceen,
-        path: 'scanQrCodeSceen',
-        name: "ScanQrCodeSceen",
       ),
 
  ]
 
 
   ),
-
-  // AutoRoute(
-  //   path: "/dassbordScreen",
-  //   page: DassbordScreen,
-  // ),  
+  
   RedirectRoute(path: '*', redirectTo: '/dassbordScreen')          
   ],            
 )                

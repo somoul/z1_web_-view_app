@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../configs/auto_route/auto_route.gr.dart';
 
@@ -10,7 +11,8 @@ class BottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AutoTabsScaffold(
+    int index=1;
+    return  AutoTabsScaffold(
       animationDuration: const Duration(seconds: 0),
       resizeToAvoidBottomInset: false,
       routes:const [
@@ -20,49 +22,69 @@ class BottomBar extends StatelessWidget {
       ],
       builder: (context, child, animation) {
         return Scaffold(
+          backgroundColor: Colors.white,
           body: FadeTransition(
             opacity: animation,
             child: child,
           ),
-          bottomNavigationBar: Container(
+          bottomNavigationBar:  SizedBox(
             width: MediaQuery.of(context).size.width > 1024
                 ? 1024
                 : MediaQuery.of(context).size.width,
-            padding: const EdgeInsets.only(bottom: 30, top: 10),
-            height: 75,
-            color: Colors.white,
+           // padding: const EdgeInsets.only(bottom: 30, top: 10),
+            height:70,
+            //color: Colors.white,
             child: Row(
               children: [
                 Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      debugPrint(' Show BottomNavigetionBar QRCode: 1');
+                      index=0;
+                      AutoTabsRouter.of(context).setActiveIndex(0);
+                      debugPrint(' Show BottomNavigetionBar QRCode: 0');
                     },
                     child: Container(
-                      color: Colors.black12,
-                      child: const Icon(Icons.qr_code),
+                     // color: Colors.black12,
+                      child:  Icon(Icons.qr_code,size:30,
+                       color:index==0
+                              ? Colors.blue
+                              : Colors.black26
+                      ),
                     ),
                   ),
                 ),
                  Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      debugPrint(' Show BottomNavigetionBar Home: 2');
+                      index=1;
+                       AutoTabsRouter.of(context).setActiveIndex(1);
+                      debugPrint(' Show BottomNavigetionBar Home: 1');
                     },
                     child: Container(
-                      color: Colors.black12,
-                      child: const Icon(Icons.home),
+                      //color: Colors.black12,
+                      child:  Icon(Icons.home,size:30,
+                        color:index==1
+                              ? Colors.blue
+                              : Colors.black26,
+                      ),
                     ),
                   ),
                 ),
                  Expanded(
                   child: GestureDetector(
                     onTap: () {
-                      debugPrint(' Show BottomNavigetionBar Profile: 3');
+                      index=2;
+                       AutoTabsRouter.of(context).setActiveIndex(2);
+                      debugPrint(' Show BottomNavigetionBar Profile: 2');
                     },
                     child: Container(
-                      color: Colors.black12,
-                      child:const  Icon(Icons.person),
+                      //color: Colors.black12,
+                      // height:100,
+                      // width: 100,
+                      child:  Icon(Icons.person,size:30,
+                       color:index==2
+                              ? Colors.blue
+                              : Colors.black26),
                     ),
                   ),
                 ),
