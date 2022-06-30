@@ -1,18 +1,24 @@
 import 'package:auto_route/auto_route.dart';
 
 import '../../cores/slash_screen.dart';
+import '../../cores/walk_though/page/onborading_screen.dart';
 import '../../modules/bottom_bar.dart';
 import '../../modules/dassbord/dassbord_screen.dart';
 import '../../modules/profile/profile_screen.dart';
 import '../../modules/scan_qp_code/scan_qr_code_screen.dart';   
 @MaterialAutoRouter(            
   replaceInRouteName: 'Page,Route',            
-  routes: <AutoRoute>[            
+  routes: <AutoRoute>[        //OnboardingScreen    
    AutoRoute(
     path: "/slashScreen",
     page: SlashScreen,
     initial: true,
-  ), 
+  ),
+   AutoRoute(
+    path: "onboardingScreen",
+    page: OnboardingScreen,
+   name: 'OnboardingScreen'
+  ),  
   AutoRoute(
     path: "",
     page: BottomBar,

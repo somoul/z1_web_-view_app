@@ -14,8 +14,10 @@ class SlashScreen extends StatefulWidget {
 class _SlashScreenState extends State<SlashScreen> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 3), () {
-      context.router.replaceNamed('dassbordScreen');
+    Timer(const Duration(seconds: 3), () {//onboardingScreen
+    // context.router.replaceNamed('dassbordScreen');
+    //  context.router.replaceNamed('OnboardingScreen');
+    context.navigateNamedTo('onboardingScreen'); 
     });
   } // SlashScreen({Key? key}) : super(key: key);
 
@@ -27,13 +29,14 @@ class _SlashScreenState extends State<SlashScreen> {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Colors.white,
+        color:const Color(0xff3999B7),
         child: Column(
-          children: const [
-            Spacer(),
-            Center(child: Text('Show SlashScreen ')),
-            Spacer(),
-            Padding(
+          children:  [
+           const Spacer(),
+            Center(child:Image.network('https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Vector-based_example.svg/588px-Vector-based_example.svg.png',height:165,width: 165,)//Text('Show SlashScreen ')
+            ),
+          const  Spacer(),
+           const Padding(
               padding: EdgeInsets.only(bottom: 30),
               child: CircularProgressIndicator(
                 value: null,
