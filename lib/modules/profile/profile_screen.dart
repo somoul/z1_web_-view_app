@@ -9,7 +9,7 @@ class ProfileScreen extends StatelessWidget {
       body: Container(
         height: double.infinity,
         width: double.infinity,
-        color: Colors.red,
+        color: Colors.blue,
       ),
 
     );
