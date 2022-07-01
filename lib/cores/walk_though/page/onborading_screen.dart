@@ -43,8 +43,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     backgroundColor:Colors.blueAccent,//Theme.of(context).primaryColor,
-      
+      backgroundColor: Colors.blueAccent, //Theme.of(context).primaryColor,
+
       body: kIsWeb
           ? SafeArea(
               child: SizedBox(
@@ -107,79 +107,72 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(
-                        left: 10,
-                        right: 10,
-                      ),
-                      child: SizedBox(
-                        height: 40,
-                        child: Padding(
-                          padding: const EdgeInsets.only(bottom: 10),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                             currentIndex != onboardingList.length - 1
-                                ? TextButton(
-                                    onPressed: () {
-                                      //  LocalData.storeBool('onboarding', true);
-                                      context.router.replaceNamed('dassbordScreen');
-                                    },
-                                    child: const Text(
-                                      'Skip',
-                                      style: TextStyle(color: Colors.white,fontSize: 17),
-                                    ),
-                                  )
-                                : const SizedBox(),
-                            currentIndex == onboardingList.length - 1
-                                ? Padding(
-                                    padding: const EdgeInsets.only(right: 0),
-                                    child: Container(
-                                      //  height: 100,
-                                      //  width: 100,
-                                      decoration:const ShapeDecoration(
-                                        color: Colors.blueAccent,
-                                        shape:  CircleBorder(),
-                                        shadows:[
-                                          BoxShadow(color:Color(0xff3366FF),blurRadius:1,spreadRadius: 2)
-                                        ]
-                                      ),
-                                      child: Center(
-                                        child: Padding(
-                                          padding: const EdgeInsets.only(left:10,right: 10,),
-                                          child: IconButton(
-                                             padding :const EdgeInsets.only(bottom:0),
-                                            icon: const Icon(Icons.arrow_forward),
-                                            color:Colors.white,
-                                            onPressed: () {
-                                              // LocalData.storeBool('onboarding', true);
-                                              context.router.replaceNamed('dassbordScreen');
-                                            },
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  )
-                                : Container(
-                                    padding: const EdgeInsets.only(right: 10),
-                                    width: 110,
-                                    // height: 60,
-                                    child: CustomButton(
-                                      height: 70,
-                                      onTap: () {
-                                        controller.animateToPage(
-                                            currentIndex + 1,
-                                            duration: const Duration(
-                                                milliseconds: 500),
-                                            curve: Curves.ease);
-                                      },
-                                      // isDisable: false,
-                                      // isFill: true,
-                                      title: 'Next',
-                                    ),
+                          bottom: 15, left: 20, right: 20),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          currentIndex != onboardingList.length - 1
+                              ? TextButton(
+                                  onPressed: () {
+                                    //  LocalData.storeBool('onboarding', true);
+                                    context.router
+                                        .replaceNamed('dassbordScreen');
+                                  },
+                                  child: const Text(
+                                    'Skip',
+                                    style: TextStyle(
+                                        color: Colors.white, fontSize: 17),
                                   ),
-                            ],
-                          ),
-                        ),
+                                )
+                              : const SizedBox(),
+                          currentIndex == onboardingList.length - 1
+                              ? Container(
+                                height: 40,
+                                width: 40,
+                                decoration: BoxDecoration(
+                                 // color: Colors.blueAccent,
+                                  borderRadius: BorderRadius.circular(50),
+                                  border: Border.all(
+                                    width: 1.05,
+                                    color: Theme.of(context).canvasColor,
+                                  ),
+                                  color: Colors.transparent,
+                                ),
+                                child: Center(
+                                  child: IconButton(
+                                    padding:
+                                        const EdgeInsets.only(bottom: 0),
+                                    icon: const Icon(Icons.arrow_forward),
+                                    color: Colors.white,
+                                    onPressed: () {
+                                      // LocalData.storeBool('onboarding', true);
+                                      context.router
+                                          .replaceNamed('dassbordScreen');
+                                    },
+                                  ),
+                                ),
+                              )
+                              : CustomButton(
+                                  // height: 30,
+                                  padding: const EdgeInsets.only(
+                                    left: 19,
+                                    right: 19,
+                                    top: 5,
+                                    bottom: 5,
+                                  ),
+                                  colors: Colors.blueAccent,
+                                  onTap: () {
+                                    controller.animateToPage(currentIndex + 1,
+                                        duration:
+                                            const Duration(milliseconds: 500),
+                                        curve: Curves.ease);
+                                  },
+                                  // isDisable: false,
+                                  // isFill: true,
+                                  title: 'Next',
+                                ),
+                        ],
                       ),
                     )
                   ],
@@ -264,11 +257,13 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ? TextButton(
                                     onPressed: () {
                                       //  LocalData.storeBool('onboarding', true);
-                                     context.router.replaceNamed('dassbordScreen');
+                                      context.router
+                                          .replaceNamed('dassbordScreen');
                                     },
                                     child: const Text(
                                       'Skip',
-                                      style: TextStyle(color: Colors.white,fontSize: 24),
+                                      style: TextStyle(
+                                          color: Colors.white, fontSize: 24),
                                     ),
                                   )
                                 : const SizedBox(),
@@ -282,10 +277,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                       ),
                                       child: IconButton(
                                         icon: const Icon(Icons.arrow_forward),
-                                        color: Color.fromARGB(255, 144, 199, 218),
+                                        color: const Color.fromARGB(
+                                            255, 144, 199, 218),
                                         onPressed: () {
                                           // LocalData.storeBool('onboarding', true);
-                                        context.router.replaceNamed('dassbordScreen');
+                                          context.router
+                                              .replaceNamed('dassbordScreen');
                                         },
                                       ),
                                     ),
@@ -295,7 +292,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     width: 110,
                                     // height: 60,
                                     child: CustomButton(
-                                      height: 70,
+                                      // height: 100,
                                       onTap: () {
                                         controller.animateToPage(
                                             currentIndex + 1,
