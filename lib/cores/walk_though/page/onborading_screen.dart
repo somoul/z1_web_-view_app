@@ -116,8 +116,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                               ? TextButton(
                                   onPressed: () {
                                     //  LocalData.storeBool('onboarding', true);
-                                    context.router
-                                        .replaceNamed('dassbordScreen');
+                                    // context.router
+                                    //     .replaceNamed('dassbordScreen');
+                                        context.navigateNamedTo('signInScreen'); 
                                   },
                                   child: const Text(
                                     'Skip',
@@ -147,8 +148,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                     color: Colors.white,
                                     onPressed: () {
                                       // LocalData.storeBool('onboarding', true);
-                                      context.router
-                                          .replaceNamed('dassbordScreen');
+                                      // context.router
+                                      //     .replaceNamed('dassbordScreen');
+                                          context.navigateNamedTo('signInScreen'); 
                                     },
                                   ),
                                 ),
@@ -257,8 +259,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                 ? TextButton(
                                     onPressed: () {
                                       //  LocalData.storeBool('onboarding', true);
-                                      context.router
-                                          .replaceNamed('dassbordScreen');
+                                      // context.router
+                                      //     .replaceNamed('dassbordScreen');
                                     },
                                     child: const Text(
                                       'Skip',
@@ -281,8 +283,9 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                                             255, 144, 199, 218),
                                         onPressed: () {
                                           // LocalData.storeBool('onboarding', true);
-                                          context.router
-                                              .replaceNamed('dassbordScreen');
+                                          // context.router
+                                          //     .replaceNamed('dassbordScreen');
+                                              context.navigateNamedTo('signInScreen'); 
                                         },
                                       ),
                                     ),

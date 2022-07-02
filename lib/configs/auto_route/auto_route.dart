@@ -7,6 +7,7 @@ import '../../modules/bottom_bar.dart';
 import '../../modules/dassbord/dassbord_screen.dart';
 import '../../modules/profile/profile_screen.dart';
 import '../../modules/scan_qp_code/scan_qr_code_screen.dart';
+import '../../utils/login/page/login_screen.dart';
 
 @MaterialAutoRouter(
   replaceInRouteName: 'Page,Route',
@@ -16,6 +17,7 @@ import '../../modules/scan_qp_code/scan_qr_code_screen.dart';
       path: "/slashScreen",
       page: SlashScreen,
     ),
+    AutoRoute(path: "signInScreen", page: SignInScreen, name: 'SignInScreen'),
     CustomRoute(
       page: QrScreen,
       path: 'qrscreen',
