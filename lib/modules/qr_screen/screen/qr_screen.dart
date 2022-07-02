@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-// import 'package:lottie/lottie.dart';
+import 'package:lottie/lottie.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 
 class QrScreen extends StatefulWidget {
@@ -98,19 +98,19 @@ class _QrScreenState extends State<QrScreen> {
                       height: width * 0.9,
                       width: width * 0.9,
                       // child: Lottie.asset('asset/lottie/scan_animation.json',
-                          // animate: doo),
+                      // animate: doo),
                     ),
                   ),
-                  // SizedBox(
-                  //   height: width * 0.8,
-                  //   width: width * 0.8,
-                  //   // child: Lottie.network(
-                  //   //   'https://assets7.lottiefiles.com/packages/lf20_UB33eP.json',
-                  //   //   animate: false,
-                  //   // ),
-                  //   child: Lottie.asset('asset/lottie/dot_scan.json',
-                  //       animate: doo),
-                  // ),
+                  SizedBox(
+                    height: width * 0.8,
+                    width: width * 0.8,
+                    // child: Lottie.network(
+                    //   'https://assets7.lottiefiles.com/packages/lf20_UB33eP.json',
+                    //   animate: false,
+                    // ),
+                    child: Lottie.asset('asset/lottie/dot_scan.json',
+                        animate: doo),
+                  ),
                 ],
               ),
             ),
@@ -129,7 +129,9 @@ class _QrScreenState extends State<QrScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      cameraController.stop();
+                    },
                     icon: const Icon(
                       Icons.image_rounded,
                       color: Colors.white,
@@ -137,14 +139,15 @@ class _QrScreenState extends State<QrScreen> {
                   ),
                   IconButton(
                     onPressed: () {
-                      doo = !doo;
-                      setState(() {});
+                      cameraController.switchCamera();
                     },
                     icon: const Icon(Icons.flip_camera_ios_rounded,
                         color: Colors.white),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      cameraController.toggleTorch();
+                    },
                     icon: const Icon(Icons.flash_off_rounded,
                         color: Colors.white),
                   ),
