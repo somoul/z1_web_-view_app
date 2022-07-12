@@ -1,9 +1,4 @@
-
-import 'dart:async';
-
-import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:mobile_scanner/mobile_scanner.dart';
 // import 'package:url_launcher/url_launcher.dart';
 
@@ -39,123 +34,126 @@ class _ScanQrCodeSceenState extends State<ScanQrCodeSceen> {
         // ),
         appBar: null,
         backgroundColor: const Color(0xFF49585F),
-        body:Container(height: double.infinity,width: double.infinity,color:Colors.black12,));
-        // Center
-        //   child: Stack(
-        //     children: [
-        //       Positioned(
-        //         left: 10,
-        //         top: 20,
-        //         child: IconButton(
-        //           // Icons.clear,
-        //           color: Colors.white,
-        //           icon: const Icon(Icons.clear),
-        //           onPressed: () {
-        //             context.router.navigateBack();
-        //             //Navigator.pop(context);
-        //           },
-        //           // size: 21,
-        //           iconSize: 21,
-        //         ),
-        //       ),
-        //       Center(
-        //         child: SizedBox(
-        //           height: 227.7,
-        //           width: 227.5,
-        //           child: MobileScanner(
-        //             allowDuplicates: true,
-        //             controller: cameraController,
-        //             onDetect: (barcode, args) {
-        //               // scanQrController.linkScranQRCode.value =
-        //               //     barcode.rawValue!;
-        //               debugPrint('Barcode found! 111 : ${barcode.rawValue!}');
-        //               Timer(
-        //                 const Duration(seconds: 1),
-        //                 () {
-        //                   // context.router.navigateBack();
-        //                 },
-        //               );
-        //             },
-        //           ),
-        //         ),
-        //       ),
-        //       QRScannerOverlay(
-        //         overlayColour: Colors.red.withOpacity(0.5),
-        //       ),
-        //       Positioned(
-        //         left: 15,
-        //         right: 15,
-        //         top: 220,
-        //         child: Center(
-        //           child: Column(
-        //             mainAxisAlignment: MainAxisAlignment.center,
-        //             crossAxisAlignment: CrossAxisAlignment.center,
-        //             children: [
-        //               Text(
-        //                 'Scan QR Code',
-        //                 textAlign: TextAlign.center,
-        //                 style: Theme.of(context).textTheme.bodyText1!.copyWith(
-        //                       fontSize: 22,
-        //                       fontFamily: 'SFPRODISPLAYBOLD',
-        //                       //fontWeight: FontWeight.w700,
-        //                       color: Colors.white.withOpacity(0.9),
-        //                     ),
-        //               ),
-        //               const SizedBox(
-        //                 height: 10,
-        //               ),
-        //               Text(
-        //                 'Align QR code within the frame to scan',
-        //                 textAlign: TextAlign.center,
-        //                 style: Theme.of(context).textTheme.bodyText1!.copyWith(
-        //                       fontSize: 16,
-        //                       // fontWeight: FontWeight.w700,
-        //                       fontFamily: 'SFPRODISPLAYREGULAR',
-        //                       color: Colors.white.withOpacity(0.9),
-        //                     ),
-        //               )
-        //             ],
-        //           ),
-        //         ),
-        //       ),
-        //       Positioned(
-        //         left: 0,
-        //         right: 0,
-        //         bottom: 170,
-        //         child: Column(
-        //           children: [
-        //             GestureDetector(
-        //               onTap: () {
-        //                 setState(() {
-        //                   isFlashOn = !isFlashOn!;
-        //                 });
-        //               },
-        //               child: SvgPicture.asset(
-        //                 isFlashOn == true
-        //                     ? 'assets/svg/flash.svg'
-        //                     : 'assets/svg/flash.svg',
-        //               ),
-        //             ),
-        //             const SizedBox(
-        //               height: 10,
-        //             ),
-        //             Text(
-        //               'Flash',
-        //               textAlign: TextAlign.center,
-        //               style: Theme.of(context).textTheme.bodyText1!.copyWith(
-        //                     fontSize: 14,
-        //                     color: Colors.white70.withOpacity(0.9),
-        //                     fontFamily: 'SFPRODISPLAYREGULAR',
-        //                   ),
-        //             ),
-        //           ],
-        //         ),
-        //       ),
-           
-        //     ],
-        //   ),
-        // ));
-  
+        body: Container(
+          height: double.infinity,
+          width: double.infinity,
+          color: Colors.black12,
+        ));
+    // Center
+    //   child: Stack(
+    //     children: [
+    //       Positioned(
+    //         left: 10,
+    //         top: 20,
+    //         child: IconButton(
+    //           // Icons.clear,
+    //           color: Colors.white,
+    //           icon: const Icon(Icons.clear),
+    //           onPressed: () {
+    //             context.router.navigateBack();
+    //             //Navigator.pop(context);
+    //           },
+    //           // size: 21,
+    //           iconSize: 21,
+    //         ),
+    //       ),
+    //       Center(
+    //         child: SizedBox(
+    //           height: 227.7,
+    //           width: 227.5,
+    //           child: MobileScanner(
+    //             allowDuplicates: true,
+    //             controller: cameraController,
+    //             onDetect: (barcode, args) {
+    //               // scanQrController.linkScranQRCode.value =
+    //               //     barcode.rawValue!;
+    //               debugPrint('Barcode found! 111 : ${barcode.rawValue!}');
+    //               Timer(
+    //                 const Duration(seconds: 1),
+    //                 () {
+    //                   // context.router.navigateBack();
+    //                 },
+    //               );
+    //             },
+    //           ),
+    //         ),
+    //       ),
+    //       QRScannerOverlay(
+    //         overlayColour: Colors.red.withOpacity(0.5),
+    //       ),
+    //       Positioned(
+    //         left: 15,
+    //         right: 15,
+    //         top: 220,
+    //         child: Center(
+    //           child: Column(
+    //             mainAxisAlignment: MainAxisAlignment.center,
+    //             crossAxisAlignment: CrossAxisAlignment.center,
+    //             children: [
+    //               Text(
+    //                 'Scan QR Code',
+    //                 textAlign: TextAlign.center,
+    //                 style: Theme.of(context).textTheme.bodyText1!.copyWith(
+    //                       fontSize: 22,
+    //                       fontFamily: 'SFPRODISPLAYBOLD',
+    //                       //fontWeight: FontWeight.w700,
+    //                       color: Colors.white.withOpacity(0.9),
+    //                     ),
+    //               ),
+    //               const SizedBox(
+    //                 height: 10,
+    //               ),
+    //               Text(
+    //                 'Align QR code within the frame to scan',
+    //                 textAlign: TextAlign.center,
+    //                 style: Theme.of(context).textTheme.bodyText1!.copyWith(
+    //                       fontSize: 16,
+    //                       // fontWeight: FontWeight.w700,
+    //                       fontFamily: 'SFPRODISPLAYREGULAR',
+    //                       color: Colors.white.withOpacity(0.9),
+    //                     ),
+    //               )
+    //             ],
+    //           ),
+    //         ),
+    //       ),
+    //       Positioned(
+    //         left: 0,
+    //         right: 0,
+    //         bottom: 170,
+    //         child: Column(
+    //           children: [
+    //             GestureDetector(
+    //               onTap: () {
+    //                 setState(() {
+    //                   isFlashOn = !isFlashOn!;
+    //                 });
+    //               },
+    //               child: SvgPicture.asset(
+    //                 isFlashOn == true
+    //                     ? 'assets/svg/flash.svg'
+    //                     : 'assets/svg/flash.svg',
+    //               ),
+    //             ),
+    //             const SizedBox(
+    //               height: 10,
+    //             ),
+    //             Text(
+    //               'Flash',
+    //               textAlign: TextAlign.center,
+    //               style: Theme.of(context).textTheme.bodyText1!.copyWith(
+    //                     fontSize: 14,
+    //                     color: Colors.white70.withOpacity(0.9),
+    //                     fontFamily: 'SFPRODISPLAYREGULAR',
+    //                   ),
+    //             ),
+    //           ],
+    //         ),
+    //       ),
+
+    //     ],
+    //   ),
+    // ));
   }
 }
 
@@ -180,7 +178,6 @@ class _QRScannerOverlayState extends State<QRScannerOverlay> {
 
   @override
   Widget build(BuildContext context) {
-   
     double scanArea = (MediaQuery.of(context).size.width < 400 ||
             MediaQuery.of(context).size.height < 400)
         ? 215.0

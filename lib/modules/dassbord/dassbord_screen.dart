@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import '../../widgets/custom_default_size_web.dart';
+
 class DassbordScreen extends StatelessWidget {
   const DassbordScreen({Key? key}) : super(key: key);
 
@@ -17,13 +17,10 @@ class DassbordScreen extends StatelessWidget {
         //   title: const Text('Z1_APP'),
         // ),
         body: Container(
-          height: double.infinity,
-          width: double.infinity,
-          color: Colors.red
-          //
-        ),
+            height: double.infinity, width: double.infinity, color: Colors.red
+            //
+            ),
       ),
     );
-    
   }
 }
