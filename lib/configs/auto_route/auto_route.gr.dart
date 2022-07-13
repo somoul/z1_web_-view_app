@@ -68,7 +68,7 @@ class AppRouter extends _i9.RootStackRouter {
   @override
   List<_i9.RouteConfig> get routes => [
         _i9.RouteConfig('/#redirect',
-            path: '/', redirectTo: 'qrscreen', fullMatch: true),
+            path: '/', redirectTo: '/slashScreen', fullMatch: true),
         _i9.RouteConfig(SlashScreen.name, path: '/slashScreen'),
         _i9.RouteConfig(SignInScreen.name, path: 'signInScreen'),
         _i9.RouteConfig(QrScreen.name, path: 'qrscreen'),

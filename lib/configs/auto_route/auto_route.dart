@@ -16,12 +16,13 @@ import '../../utils/login/page/login_screen.dart';
     AutoRoute(
       path: "/slashScreen",
       page: SlashScreen,
+       initial: true,
     ),
     AutoRoute(path: "signInScreen", page: SignInScreen, name: 'SignInScreen'),
     CustomRoute(
       page: QrScreen,
       path: 'qrscreen',
-      initial: true,
+      // initial: true,
     ),
     AutoRoute(
         path: "onboardingScreen",
